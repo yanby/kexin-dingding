@@ -1,0 +1,46 @@
+<template name="items">
+  <view class="modal" a:if="{{!modalData.hidden}}" key="modal">
+      <view class="modal-mask" animation="{{animMaskData}}" onTap="onModalCloseTap"/>
+      <view class="modal-container" animation="{{animContentData}}">
+        <view class="modal-title">
+          <view class="modal-title-left">农事时间</view>
+          <view class="modal-title-right">
+            <view class="modal-title-time" onTap="changeTime">{{modalData.time}}</view>
+            <image class="modal-title-arrow" src="/images/arrow1.png" mode="" />
+          </view>
+        </view>
+        <view class="modal-content">
+          <block a:for="{{modalData.content}}">
+            <view class="modal-content-type-text" a:if="{{item.type === '0' || item.type === '1'}}">
+              <!-- 图文 -->
+              <block a:if="{{item.type === '0'}}">
+                <view class="modal-content-imgs">
+                  <image a:for="{{item.value}}" a:for-item="itemValue" src="{{itemValue}}" mode="" class="modal-content-img" />
+                  <view class="modal-content-add-img" data-index="{{index}}" onTap="choseModalImage">+</view>
+                </view>
+                <view class="modal-content-name">{{item.name}}</view> 
+              </block>
+
+              <!-- 文字信息 -->
+              <view class="modal-content-type-text-item" a:if="{{item.type === '1'}}">
+                <view class="modal-content-type-text-item-left">{{item.name}}</view>
+                <input data-index="{{index}}" value="{{item.value}}" onBlur="changeTxtInfo" />
+                <view class="modal-content-type-text-item-right">{{item.unit}}</view>
+              </view>
+            </view>
+          </block>
+          <block a:for="{{modalData.content}}">
+            <!-- 模块子项 -->
+            <view class="modal-content-type-text-wrapper" a:if="{{item.type === '2'}}">
+              <view class="modal-content-type-text-wrapper-left" data-modalData="{{modalData.content}}" data-index="{{index}}" onTap="linkFarmWorkOther">{{item.name}}</view>
+              <image class="modal-content-type-text-wrapper-right" src="/images/arrow-right.png" mode="" />
+            </view>
+          </block>
+        </view>
+
+        <view class="modal-button" onTap="saveRecord">
+          确定
+        </view>
+      </view>
+  </view>
+</template>

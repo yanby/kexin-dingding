@@ -1,0 +1,31 @@
+<view class="tabs">
+  <scroll-view scroll-x="{{true}}" class="scroll-view">
+    <view class="scroll-wrapper">
+      <view class="scroll-view-item" a:for="{{tabs}}" data-recordId="{{item.recordId}}" data-farmingId="{{item.farmingId}}" data-category="{{item.category}}" onTap="tapTabItem">
+        <view a:if="{{activeTab === item.recordId }}" class="scroll-view-item-active tabs-item">
+          {{ item.farmingName }}
+          <view class="tabs-repeat" a:if="{{item.addFlag === 1}}">
+            <block a:for="{{item.list}}" a:for-item="itemList">
+              <!-- 农药投入 -->
+              <view class="tabs-repeat0" a:if="{{itemList.appendedType === 0}}"></view>
+              <!-- 追肥投入 -->
+              <view class="tabs-repeat1" a:if="{{itemList.appendedType === 1}}"></view>
+            </block>
+          </view>
+        </view>
+        <view class="tabs-item" a:else>
+          {{ item. farmingName }}
+          <view class="tabs-repeat" a:if="{{item.addFlag === 1}}">
+            <block a:for="{{item.list}}" a:for-item="itemList">
+              <!-- 农药投入 -->
+              <view class="tabs-repeat0" a:if="{{itemList.appendedType === 0}}"></view>
+              <!-- 追肥投入 -->
+              <view class="tabs-repeat1" a:if="{{itemList.appendedType === 1}}"></view>
+            </block>
+          </view>
+        </view>
+      </view>
+    <view>
+  </scroll-view>
+  <view class="right-icon"><image src="/images/menu.png" mode="" onTap="tapRepeatFarmWork" /></view>
+</view>

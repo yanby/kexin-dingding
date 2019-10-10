@@ -1,0 +1,20 @@
+<view class="page-home-farm-lists">
+  <view class="{{selectFarm === item.id ? 'page-card page-card-select' : 'page-card'}}" a:for="{{list}}" data-farmId="{{item.id}}" onTap="changDefaultFarm">
+    <view class="card-header">
+      <view class="card-name">{{item.name}}</view>
+      <view class="card-star"><image src="/images/star.png" mode="" /></view>
+      <view class="card-icon" a:if="{{query.type === 'manage'}}"><image data-type="edit" data-farmId="{{item.id}}" src="/images/write.png" mode="" data-obj="{{item}}" onTap="linkCreateFarm" /></view>
+    </view>
+    <view class="card-area">面积：{{item.area}}{{item.unit}}</view>
+    <view class="card-box">
+      <view class="card-box-item">暖棚：{{item.brooderCount}}个</view>
+      <view class="card-box-item">冷棚：{{item.coolCount}}个</view>
+    </view>
+    <view a:if="{{selectFarm === item.id}}" class="card-button card-button-delete" onTap="deleteFarm" data-farmId="{{item.id}}" data-farmName="{{item.name}}" a:if="{{query.type === 'manage'}}">删除农场</view>
+    <view a:else class="card-button" onTap="linkPlantStart" data-farmId="{{item.id}}" data-farmName="{{item.name}}" a:if="{{query.type === 'manage'}}">开始种植</view>
+  </view>
+
+  <view class="page-button" data-type="create" onTap="linkCreateFarm" a:if="{{query.type === 'manage'}}">
+    <view>新增农场</view>
+  </view>
+</view>

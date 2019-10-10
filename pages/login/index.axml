@@ -1,0 +1,5 @@
+<view>
+  <!-- <input value="{{username}}" type="" placeholder="" data-type="username" onBlur="onBlur"/>
+  <input value="{{password}}" type="" placeholder="" data-type="password" onBlur="onBlur"/>
+  <view onTap="login">登录</view> -->
+</view>

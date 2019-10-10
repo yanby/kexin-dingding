@@ -1,0 +1,165 @@
+/* required by usingComponents */
+
+.page-task-no-complete {
+  width: 750rpx;
+}
+
+.page-card {
+  width: 678rpx;
+  margin: 42rpx auto 50rpx;
+  background: #fff;
+}
+
+.page-card-top {
+  position: relative;
+  width: 586rpx;
+  margin: 0 auto; 
+  border-bottom: 2px solid rgba(234,234,234,1);
+}
+
+.page-card-top-img {
+  position: absolute;
+  top: 78rpx;
+  left: 50%;
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: -32rpx;
+}
+
+.page-card-top-img image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.page-card-top-text {
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(191,191,191,1);
+  padding: 188rpx 0 64rpx;
+  text-align: center;
+}
+
+.page-card-title {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(89,87,87,1);
+  width: 586rpx;
+  margin: 0 auto; 
+  padding: 54rpx 0 52rpx;
+  border-bottom: 2px solid rgba(234,234,234,1);
+}
+
+.page-card-modal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 586rpx;
+  margin: 0 auto;
+  padding: 46rpx 0 56rpx;
+}
+
+.page-modal-card-left0 {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(91,193,119,1);
+  width: 186rpx;
+  height: 115rpx;
+  background:rgba(234,234,234,1);
+  text-align: center;
+  line-height: 115rpx;
+  margin-right: 34rpx;
+}
+
+.page-modal-card-left1 {
+  width: 186rpx;
+  height: 115rpx;
+  margin-right: 34rpx;
+}
+
+.page-modal-card-left1 image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.page-modal-card-right-top0, .page-modal-card-right-top1 {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(89,87,87,1);
+  padding-bottom: 5rpx;
+}
+
+.page-modal-card-right-bot0, .page-modal-card-right-bot1 {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(91,193,119,1);
+}
+
+.page-modal-card-right-bot1 {
+  color: rgba(191,191,191,1);
+}
+
+.page-card-otherInfo {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(89,87,87,1);
+  width: 586rpx;
+  margin: 32rpx auto 30rpx;
+  text-align: center;
+}
+
+.page-card-otherInfo-button {
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  width:586rpx;
+  background:rgba(211,211,211,1);
+  border-radius:12rpx;
+  text-align: center;
+  padding: 14rpx 0;
+  margin: 0 auto 56rpx;
+  overflow: hidden;
+}
+
+.page-card-otherInfo-button-active {
+  background:rgba(91,193,119,1);
+  color:rgba(255,255,255,1);
+}
+
+.page-modal-multiImg-name {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(89,87,87,1);
+  padding-bottom: 5rpx;
+}
+
+.page-modal-multiImg-time {
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color: rgba(191,191,191,1);
+}
+
+.page-modal-multiImg-imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 586rpx;
+}
+
+.page-modal-multiImg-imgs image {
+  width: 278rpx;
+  height: 175rpx;
+  background-size: 100%;
+  margin-bottom: 20rpx;
+}

@@ -1,0 +1,26 @@
+<view class="page-farm-work-other">
+  <view class="page-card">
+    <view class="page-card-title">{{modalData.name}}</view>
+    <view class="page-card-imgs" a:if="{{valueType0.length > 0}}">
+      <view class="page-card-img" a:for="{{valueType0}}">
+        <block a:if="{{item.flag === '1'}}">
+          <image class="page-card-img-img" src="{{item.value[0]}}" mode="" />
+          <view class="page-card-img-name">{{item.name}}</view>
+        </block>
+        <block a:else>
+          <view class="page-card-img-add" data-index="{{index}}" onTap="choseModalImage">+</view>
+          <view class="page-card-img-name">{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="page-card-text" a:if="{{valueType1.length > 0}}">
+      <view class="page-card-text-item" a:for="{{valueType1}}">
+        <view class="page-card-text-item-left">{{item.name}}</view>
+        <input data-index="{{index}}" value="{{item.value}}" onBlur="changeTxtInfo" />
+        <view class="page-card-text-item-right">{{item.unit}}</view>
+      </view>
+    </view>
+
+    <view class="page-card-button" onTap="tapConfirm">确定</view>
+  </view>
+</view>

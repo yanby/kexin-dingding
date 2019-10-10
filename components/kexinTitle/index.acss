@@ -1,0 +1,84 @@
+@import '/utils/items-top/index.acss';
+
+.kexin-title {
+  box-sizing: border-box;
+  position: relative;
+  width: 750rpx;
+  height: 86rpx;
+  background: #595757;
+  color: #fff;
+  line-height: 86rpx;
+}
+
+.user {
+  position: absolute;
+  top: 50%;
+  margin-top: -18rpx;
+  left: 52rpx;
+  width: 28rpx;
+  height: 36rpx;
+  line-height: 0;
+  z-index: 1
+}
+
+.user image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.kexin-title-wrapper {
+  width: 550rpx;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-txt {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-size: 32rpx;
+  max-width: 450rpx;
+  padding-right: 30rpx;
+}
+
+.title-txt::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5rpx;
+  width: 10rpx;
+  height: 10rpx;
+  margin-top: -5rpx;
+  margin-left: 10rpx;
+  border-top: 1rpx solid #fff;
+  border-left: 1rpx solid #fff;
+  transform: rotate(-135deg);
+}
+
+.backgroundimg {
+  position: absolute;
+  top: 0;
+  width: 224rpx;
+  height: 86rpx;
+}
+
+.backgroundimg-left {
+  left: 0;
+  background-image: url('../../images/dianlutuleft.png');
+  background-repeat: no-repeat;
+  background-position: left 0;
+  background-size: 100%;
+}
+
+.backgroundimg-right {
+  right: 0;
+  background-image: url('../../images/dianluturight.png');
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-size: 100%;
+}

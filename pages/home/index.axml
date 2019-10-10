@@ -1,0 +1,46 @@
+<view class="page-home">
+  <view class="page-header">
+    <view class="page-avator">
+      <image src="{{userInfo.photo}}" mode="" />
+    </view>
+    <view class="page-username">{{userInfo.realName}}</view>
+    <view class="page-farmname">{{userInfo.farm.name}}</view>
+    <view class="page-bg page-bg-left"><image src="/images/dianlutuleft.png" mode="" /></view>
+    <view class="page-bg page-bg-right"><image src="/images/dianluturight.png" mode="" /></view>
+  </view>
+
+  <view class="page-center">
+    <view class="page-farm">
+      <view class="page-farm-left">
+        <image class="page-farm-png" src="/images/farm.png" mode="" />
+        <view class="page-farm-name">{{userInfo.farm.name}}</view>
+      </view>
+      <view class="page-farm-right">
+        <view class="page-farm-score" onTap="linkHomeFarm">{{userInfo.farm.score || 0}}分</view>
+        <image class="page-farm-router" data-type="default" onTap="changeFarm" src="/images/router.png" mode="" />
+      </view>
+    </view>
+
+    <view class="page-lists">
+      <view class="page-manage page-list" data-type="manage" onTap="changeFarm">
+        <view class="page-left">
+          <image src="/images/manage.png" mode="" />
+          <view class="page-farm-name">管理农场</view>
+        </view>
+        <view class="page-right">
+          <image src="/images/arrow-right.png" mode="" />
+        </view>
+      </view>
+      <view class="page-info page-list" onTap="linkHomeFarmer">
+        <view class="page-left">
+          <image src="/images/complete-info.png" mode="" />
+          <view class="page-farm-name">完善资料</view>
+          <view class="page-farm-info-percentage">{{userInfo.dataIntegrity}}</view>
+        </view>
+        <view class="page-right">
+          <image src="/images/arrow-right.png" mode="" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

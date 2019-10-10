@@ -1,0 +1,38 @@
+<view class="page-home-crop-detail">
+  <view class="page-crop-card">
+    <view class="list-column-1">
+      <image src="{{cropInfo.image}}" mode="" />
+    </view>
+    <view class="list-column-2">
+      <view class="crop-name">{{cropInfo.cropName}}</view>
+      <view class="crop-info">{{cropInfo.plotName}}</view>
+      <view class="crop-batch">{{cropInfo.cropVariety}}</view>
+    </view>
+    <view class="list-column-3">
+      <view class="crop-score">{{cropInfo.score}}分</view>
+      <view class="crop-judge">极佳</view>
+    </view>
+  </view>
+  <view class="page-time-card" a:for="{{timerShaft}}">
+     <view class="page-time-list">
+       <view class="column1">
+         <view class="time-year">{{item.year}}</view>
+         <view class="time-monthday">{{item.date}}</view>
+       </view>
+       <view class="column2">
+         <view class="line1">{{item.plotName}} {{item.cropVariety}}</view>
+         <view class="line2">
+           <view class="line2-left">{{item.farmWorkName}}</view>
+           <!-- <view class="line2-right">非有机肥料</view> -->
+         </view>
+         <view class="line3">{{item.weight}}</view>
+         <view class="line4">
+           <image a:for="{{item.images}}" a:for-item="itemImg" src="{{itemImg.value}}" mode="" />
+         </view>
+       </view>
+       <view class="ball-top-line"></view>
+       <view class="ball-bot-line"></view>
+       <view class="ball"></view>
+     </view>
+  </view>
+</view>

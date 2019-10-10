@@ -1,0 +1,9 @@
+{
+  "window": {
+    "defaultTitle": "可信农场"
+  },
+  "usingComponents": {
+    "ke-xin-title": "/components/kexinTitle/index",
+    "ke-xin-tabs": "/components/farm-work/index"
+  }
+}

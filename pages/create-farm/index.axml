@@ -1,0 +1,35 @@
+<view class="page-create-farm">
+  <view class="page-card">
+    <view class="page-title">{{title}}</view>
+    <view class="page-input">
+      <input value="{{farmName}}" type="" data-param="farmName" onBlur="onBlur" placeholder="请输入您的农场名字" />
+    </view>
+    <view class="page-input">
+      <input type="" value="{{area}}" data-param="area" onBlur="onBlur" placeholder="农场总面积(亩)" />
+    </view>
+    <view class="page-box page-box-warm">
+      <view class="type">暖棚</view>
+      <view class="jian" data-param="brooderCount" onTap="tapJian">-</view>
+      <view class="value">
+        <input class="brooderCount" value="{{brooderCount}}" disabled="{{query.type === 'edit'}}" data-param="brooderCount" onBlur="onBlur" type="tel" />
+      </view>
+      <view class="jia" data-param="brooderCount" onTap="tapJia">+</view>
+    </view>
+    <view class="page-box page-box-cold">
+      <view class="type">冷棚</view>
+      <view class="jian" data-param="coolCount" onTap="tapJian">-</view>
+      <view class="value">
+        <input class="coolCount" disabled="{{query.type === 'edit'}}" value="{{coolCount}}" data-param="coolCount" onBlur="onBlur" type="tel" />
+      </view>
+      <view class="jia" data-param="coolCount" onTap="tapJia">+</view>
+    </view>
+  </view>
+  <view class="page-bot">
+    <view class="page-logo">
+      <image src="/images/text1.png" mode="" />
+    </view>
+    <view class="page-button">
+      <view class="button" onTap="linkPlantStart">确认</view>
+    </view>
+  </view>
+</view>

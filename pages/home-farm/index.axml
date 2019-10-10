@@ -1,0 +1,67 @@
+<view class="page-home-farm">
+  <view class="page-card">
+    <view class="page-card-wrapper">
+      <view class="page-line1">
+        <view class="page-name">{{farmInfo.name}}</view>
+        <image src="/images/more.png" mode="" onTap="linkHomeCredit" />
+      </view>
+      <view class="page-line2">
+        <view class="page-tips">农场健康值</view>
+        <view class="page-farm-score">{{farmInfo.score}}分</view>
+        <view class="page-farm-time">截止到{{farmInfo.updateTime}}</view>
+      </view>
+      <view class="page-line3">
+        <view class="page-line3-left">
+          <view class="page-line3-left-top">{{farmInfo.coverArea}}</view>
+          <view class="page-line3-left-bot">可信覆盖面积</view>
+        </view>
+        <view class="page-line3-right">
+          <view class="page-line3-right-top">{{farmInfo.assessCount}}份</view>
+          <view class="page-line3-right-bot">农场健康评估保报告</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-crops">
+    <view class="page-tabs">
+      <view class="picker">
+        <picker onChange="bindObjPickerChange0" value="{{value[0]}}" range="{{boxList}}" range-key="name">
+          <view>{{valueTitle[0]}}</view>
+        </picker>
+      </view>
+      <view class="picker">
+        <picker onChange="bindObjPickerChange1" value="{{value[1]}}" range="{{plotList}}" range-key="name">
+          <view>{{valueTitle[1]}}</view>
+        </picker>
+      </view>
+      <view class="picker">
+        <picker onChange="bindObjPickerChange2" value="{{value[2]}}" range="{{cropList}}" range-key="name">
+          <view>{{valueTitle[2]}}</view>
+        </picker>
+      </view>
+      <view class="picker">
+        <picker onChange="bindObjPickerChange3" value="{{value[3]}}" range="{{statusList}}" range-key="name">
+          <view>{{valueTitle[3]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="page-crop-lists">
+      <view class="page-crop-list" a:for="{{list}}" data-cropId="{{item.id}}" onTap="linkHomeCropDetail">
+        <view class="list-column-1">
+          <image src="{{item.image}}" mode="" />
+        </view>
+        <view class="list-column-2">
+          <view class="crop-name">{{item.cropName}}</view>
+          <view class="crop-info">{{item.plotName}}</view>
+          <view class="crop-batch">{{item.cropVariety}}</view>
+        </view>
+        <view class="list-column-3">
+          <view class="crop-score">{{item.score}}分</view>
+          <view class="crop-judge">极佳</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

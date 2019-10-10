@@ -1,0 +1,18 @@
+.complete-page-card-top-text {
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(89,87,87,1);
+}
+
+.page-modal-textInfo {
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(89,87,87,1);
+  width: 586rpx;
+  margin: 0 auto;
+  padding-top: 34rpx;
+  padding-bottom: 42rpx; 
+  border-top: 2rpx solid rgba(234,234,234,1);
+}

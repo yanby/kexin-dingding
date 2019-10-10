@@ -1,0 +1,43 @@
+.page-home-healthy {
+  width: 750rpx;
+}
+
+.page-healthy-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 685rpx;
+  background:rgba(255,255,255,1);
+  border-radius:12px;
+  margin: 30rpx auto;
+  padding: 42rpx 0 40rpx;
+}
+
+.column1 image {
+  width: 45rpx;
+  height: 45rpx;
+  background-size: 100%;
+}
+
+.top-name {
+  font-size: 32rpx;
+  font-family:SF Pro Display;
+  font-weight:600;
+  line-height:34rpx;
+  color:rgba(89,87,87,1);
+}
+
+.bot-time {
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:26rpx;
+  color:rgba(191,191,191,1);
+  padding-top: 10rpx;
+}
+
+.column3 image {
+  width: 9rpx;
+  height: 20rpx;
+  background-size: 100%;
+}

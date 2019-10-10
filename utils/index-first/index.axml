@@ -1,0 +1,65 @@
+  <!-- 模块子项 - 按钮型 -->
+
+<template name="index-first">
+  <view class="module-button" a:if="{{type === 1}}">
+    <view class="module-button-wrapper">
+      <view a:for="{{imgArr}}" data-recordId="{{item.recordId}}" class="{{item.recordId === activeType ? 'button-item button-item-active' : 'button-item'}}" onTap="choseType1">{{item.name}}</view>
+    </view>
+  </view>
+
+  <!-- 模块子项 - 流程性 -->
+  <view class="module-process" a:if="{{type === 2}}">
+    <view class="module-process-wrapper">
+      <block a:for="{{imgArr}}">
+        <view class="{{item.recordId === activeType ? 'content content-active' : 'content'}}" data-recordId="{{item.recordId}}">
+          <view class="item-top">{{index + 1}}</view>
+          <view class="item-bot">{{item.name}}</view>
+        </view>
+        <view a:if="{{index !== imgArr.length - 1}}" class="{{item.recordId === activeType ? 'dashed dashed-active' : 'dashed'}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 授粉-特殊处理 -->
+  <view class="module-button" a:if="{{pollination.farmingId === 8}}">
+    <view class="module-button-wrapper">
+      <view data-type="bee" class="{{pollination.type === 'bee' ? 'button-item button-item-active' : 'button-item'}}" onTap="chosePollination">熊蜂授粉</view>
+      <view data-type="do" class="{{pollination.type === 'do' ? 'button-item button-item-active' : 'button-item'}}" onTap="chosePollination">振荡授粉</view>
+      <view data-type="other" class="{{pollination.type === 'other' ? 'button-item button-item-active' : 'button-item'}}" onTap="chosePollination">其它授粉</view>
+    </view>
+  </view>
+
+  <!-- 模块说明 -->
+  <view class="module-info">
+    <view class="module-logo">
+      <image src="/images/logo.png" mode="" />
+    </view>
+    <view class="module-line"></view>
+    <view class="module-txt">请您按照如下提示拍照</view>
+  </view>
+
+  <!-- 图文内容区 -->
+  <view class="page-img-txt">
+    <view class="page-bg">
+      <image src="/images/bg2.png" mode="" />
+      <view class="mangban"></view>
+    </view>
+    <view class="page-txt">
+      <view class="page-txt-title">{{activeNeedImg.content.length > 0 ? activeNeedImg.content[0].name : ''}}</view>
+    </view>
+    <view class="pai" onTap="choseImage" data-pai="1">稍后再拍</view>
+    <view class="page-camera">
+      <image src="/images/camera.png" mode="" onTap="choseImage"/>
+    </view>
+  </view>
+
+  <!-- 页面底部 -->
+  <view class="page-bot">
+    <view class="page-logo">
+      <image src="/images/text1.png" mode="" />
+    </view>
+    <view class="page-button">
+      点滴之间 信任沉淀
+    </view>
+  </view>
+</template>

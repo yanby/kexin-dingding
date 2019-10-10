@@ -1,0 +1,8 @@
+{
+  "window": {
+    "defaultTitle": "可信农场"
+  },
+  "usingComponents": {
+    "scale": "/components/keXinRules/index"
+  }
+}

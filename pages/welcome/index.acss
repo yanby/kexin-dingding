@@ -1,0 +1,79 @@
+.page-welcome {
+  position: relative;
+  padding-bottom: 150rpx;
+  background: url('/images/bg-big.png') center no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-size: 40rpx;
+  font-family: SF Pro Text;
+  font-weight: bold;
+  width: 750rpx;
+  padding: 200rpx 0 28rpx;
+  line-height: 48rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.page-center {
+  width: 190rpx;
+  height: 56rpx;
+  margin: 274rpx auto 0;
+}
+
+.page-center image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.page-tips {
+  width: 618rpx;
+  font-size: 28rpx;
+  font-family: SF Pro Text;
+  font-weight: 400;
+  margin: 0 auto;
+  line-height: 52rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.page-logo {
+  width: 750rpx;
+  height: 45rpx;
+  margin-top: 14rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+
+.page-logo image {
+  width: 190rpx;
+  height: 45rpx;
+  background-size: 100%;
+}
+
+.page-button {
+  width: 750rpx;
+  text-align: center;
+}
+
+.page-button .button {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  line-height: 56rpx;
+  color: rgba(255,255,255,1);
+  width: 686rpx;
+  padding: 20rpx 0 18rpx;
+  margin: 0 auto 60rpx;
+  text-align: center;
+  background: #5BC177;
+  border-radius: 6rpx;
+}
+
+.page-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

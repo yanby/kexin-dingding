@@ -1,0 +1,10 @@
+@import '/utils/items/index.acss';
+@import '/utils/index-first/index.acss';
+@import '/utils/index-nocomplete/index.acss';
+@import '/utils/index-complete/index.acss';
+
+.page-index {
+  width: 750rpx;
+  background: #F7F7F7;
+}
+

@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="page-title">
+    第{{ order }}题
+  </view>
+  <!-- <view class="page-img">
+    <image src="/images/wenben.png" mode="" />
+  </view> -->
+  <view class="page-content">
+    {{questionList[0].title}}
+  </view>
+  <view class="page-selection">
+    <radio-group class="radio-group" onChange="radioChange">
+      <label class="radio" a:for="{{newQuestionList}}">
+        <radio value="{{item.options}}"/>{{item.context}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="page-bottom">
+    <view class="page-logo">
+      <image src="/images/text1.png" mode="" />
+    </view>
+    <view class="page-button">
+      <view onTap="nextQuestion">下一题</view>
+    </view>
+  </view>
+</view>

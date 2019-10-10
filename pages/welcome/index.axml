@@ -1,0 +1,15 @@
+<view class="page-welcome">
+  <view class="page-center">
+    <image src="/images/welcome-txt.png" mode="" />
+  </view>
+  <view class="title">欢迎使用可信农场</view>
+  <view class="page-bottom">
+    <view class="page-tips">为了更好管理农场，回答十道题，即可为你定制专属农场管理计划。</view>
+    <view class="page-logo">
+      <image src="/images/text1.png" mode="" />
+    </view>
+    <view class="page-button">
+      <view class="button" onTap="linkQuestion">立即体验</view>
+    </view>
+  </view>
+</view>

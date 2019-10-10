@@ -1,0 +1,22 @@
+<view class="page-supplement-info">
+  <view class="page-card">
+    <view class="page-title">补充信息</view>
+    <view class="page-input">
+      <input value="{{formData.cropVariety}}" data-type="cropVariety" type="" placeholder="请输入品种" onBlur="onBlur" />
+    </view>
+    <view class="page-input">
+      <view class="{{formData.batchTime ? 'date-input': 'init-date-input'}}" value="{{formData.batchTime}}" data-type="batchTime" type="" onTap="onFocus">{{formData.batchTime || '确认批次(种植时间)'}}</view>
+    </view>
+    <view class="page-input">
+      <input value="{{formData.area}}" data-type="area" type="" placeholder="输入种植面积(亩)" onBlur="onBlur" />
+    </view>
+  </view>
+  <view class="page-bot">
+    <view class="page-logo">
+      <image src="/images/text1.png" mode="" />
+    </view>
+    <view class="page-button">
+      <view  class="button" onTap="linkIndex">开始种植</view>
+    </view>
+  </view>
+</view>

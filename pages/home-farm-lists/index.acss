@@ -1,0 +1,109 @@
+.page-home-farm-lists {
+  width: 750rpx;
+  margin-bottom: 175rpx
+}
+
+.page-card {
+  width:600rpx;
+  background:rgba(255,255,255,1);
+  border-radius:12rpx;
+  padding: 30rpx 40rpx 38rpx;
+  margin: 16rpx auto;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42rpx;
+}
+
+.card-name {
+  flex-grow: 1;
+  font-size:36rpx;
+  font-family:Source Han Sans CN;
+  font-weight:500;
+  line-height:62rpx;
+  color:rgba(91,193,119,1);
+}
+
+.card-star {
+  flex-grow: 1;
+}
+
+.card-star image {
+  width: 150rpx;
+  height: 24rpx;
+  background-size: 100%;
+}
+
+.card-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.card-icon image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.card-area {
+  font-size:28rpx;
+  font-family:SF Pro Text;
+  font-weight:600;
+  line-height:34rpx;
+  margin-bottom: 16rpx;
+  color:rgba(89,87,87,1);
+}
+
+.card-box {
+  font-size:28rpx;
+  font-family:SF Pro Text;
+  font-weight:600;
+  line-height:34rpx;
+  margin-bottom: 28rpx;
+  color:rgba(89,87,87,1);
+}
+
+.card-box-item {
+  display: inline-block;
+  padding-right: 70rpx;
+}
+
+.card-button {
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  width: 100%;
+  padding: 14rpx;
+  background:rgba(91,193,119,1);
+  border-radius:12rpx;
+  text-align: center;
+}
+
+.card-button-delete {
+  background: #e33100;
+}
+
+.page-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 65rpx;
+  background: #f7f7f7;
+  width: 750rpx;
+}
+
+.page-button view {
+  font-size:40rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  width:686rpx;
+  background:rgba(89,87,87,1);
+  border-radius:12rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  margin: 0 auto;
+}

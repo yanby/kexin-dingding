@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/index/index",
+    "pages/home/index",
+    "pages/plant-start-crop/index",
+    "pages/supplement-info/index",
+    "pages/plant-start/index",
+    "pages/create-farm/index",
+    "pages/welcome/index",
+    "pages/farm-work-other/index",
+    "pages/farm-work-repeat/index",
+    "pages/home-farm-lists/index",
+    "pages/home-farmer/index",
+    "pages/home-credit/index",
+    "pages/home-healthy/index",
+    "pages/home-crop-detail/index",
+    "pages/home-farm/index",
+    "pages/question-end/index",
+    "pages/question/index",
+    "pages/rules/index"
+  ],
+  "window": {
+    "defaultTitle": "可信农场",
+    "titleBarColor": "#595757"
+  }
+}

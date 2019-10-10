@@ -1,0 +1,14 @@
+<view class="page-home-healthy">
+  <view class="page-healthy-list">
+    <view class="column1">
+      <image src="/images/report.png" mode="" />
+    </view>
+    <view class="column2">
+      <view class="top-name">农场健康评估报告</view>
+      <view class="bot-time">2019.04.01- 04.30</view>
+    </view>
+    <view class="column3">
+      <image src="/images/arrow-right.png" mode="" />
+    </view>
+  </view>
+</view>

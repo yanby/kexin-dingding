@@ -1,0 +1,84 @@
+<view class="page-home-farmer">
+  <view class="page-header">
+    <image class="page-header-icon1" src="/images/icon1.png" mode="" />
+    <view class="page-header-content">丰富农场资料可增加信誉分 请上传</view>
+    <image class="page-header-star" src="/images/star.png" mode="" />
+  </view>
+
+  <view class="page-content">
+    <view class="content-title">农场主身份证信息</view>
+    <view class="content-box">
+      <block>
+        <view class="content-box-left" a:if="{{!idCardImage[0]}}" data-type="idCardImage" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">正面</view>
+        </view>
+        <image class="content-box-img-left" src="{{idCardImage[0]}}" mode="" a:else />
+      </block>
+      <block>
+        <view class="content-box-right" a:if="{{!idCardImage[1]}}" data-type="idCardImage" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">反面</view>
+        </view>
+        <image class="content-box-img-right" src="{{idCardImage[1]}}" mode="" a:else />
+      </block>
+    </view>
+  </view>
+  <view class="page-content">
+    <view class="content-title">农场资质</view>
+    <view class="content-box">
+      <block>
+        <view class="content-box-left" a:if="{{!businessLicense[0]}}" data-type="businessLicense" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">营业执照</view>
+        </view>
+        <image class="content-box-img-left" src="{{businessLicense[0]}}" mode="" a:else />
+      </block>
+      <block>
+        <view class="content-box-right" a:if="{{!businessLicense[1]}}" data-type="businessLicense" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">其他</view>
+        </view>
+        <image class="content-box-img-right" src="{{businessLicense[1]}}" mode="" a:else />
+      </block>
+    </view>
+  </view>
+  <view class="page-content">
+    <view class="content-title">有机、绿色等认证资质</view>
+    <view class="content-box">
+      <block>
+        <view class="content-box-left" a:if="{{!qualification[0]}}" data-type="qualification" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">认证资源</view>
+        </view>
+        <image class="content-box-img-left" src="{{qualification[0]}}" mode="" a:else />
+      </block>
+      <block>
+        <view class="content-box-right" a:if="{{!qualification[1]}}" data-type="qualification" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">其他</view>
+        </view>
+        <image class="content-box-img-right" src="{{qualification[0]}}" mode="" a:else />
+      </block>
+    </view>
+  </view>
+  <view class="page-content">
+    <view class="content-title">农场环境图</view>
+    <view class="content-box">
+      <block>
+        <view class="content-box-left" a:if="{{!farmImage[0]}}" data-type="farmImage" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">农场门牌图（须 含农场标识别）</view>
+        </view>
+        <image class="content-box-img-left" src="{{farmImage[0]}}" mode="" a:else />
+      </block>
+      <block>
+        <view class="content-box-right" a:if="{{!farmImage[1]}}" data-type="farmImage" onTap="choseImage">
+          <view class="line1">+</view>
+          <view class="line2">农场门牌图（须 含农场主与农场标识别）</view>
+        </view>
+        <image class="content-box-img-right" src="{{farmImage[1]}}" mode="" a:else />
+      </block>
+    </view>
+  </view>
+</view>

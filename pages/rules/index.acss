@@ -1,0 +1,18 @@
+.text {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.wrap {
+  width: 90%;
+  margin: 30px auto;
+  border: 1px #ccc solid;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}

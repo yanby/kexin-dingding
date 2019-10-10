@@ -1,0 +1,56 @@
+<import src="/utils/items/index.axml"/>
+<import src="/utils/index-first/index.axml"/>
+<import src="/utils/index-nocomplete/index.axml"/>
+<import src="/utils/index-complete/index.axml"/>
+
+<view class="page-index">
+  <!-- header -->
+  <ke-xin-title
+    farmName="{{keXinTitle.farmName}}"
+    title="{{keXinTitle.title}}"
+    treeData="{{keXinTitle.treeData}}"
+    firstTree="{{keXinTitle.firstTree}}"
+    secondTree="{{keXinTitle.secondTree}}"
+    thirdTree="{{keXinTitle.thirdTree}}"
+    plotType="{{keXinTitle.plotType}}"
+    onChoseBoxType="choseBoxType"
+    onChangePlotCrop="changePlotCrop"
+  >
+  </ke-xin-title>
+
+  <!-- 农事环节tab -->
+  <ke-xin-tabs
+    activeTab="{{farmWork.activeTab}}"
+    tabs="{{farmWork.tabs}}"
+    onChoseFarmWorkItem="choseFarmWorkItem"
+  >
+  </ke-xin-tabs>
+
+ 
+    <block a:if="{{status === 0}}">
+      <template
+          is="index-first"
+          key="index-first"
+          data="{{type, activeNeedImg, imgArr, activeType, pollination}}"></template>
+    </block>
+    <block a:elif="{{status === 1}}">
+      <template 
+        is="index-nocomplete"
+        key="index-nocomplete"
+        data="{{data: activeNeedImg, hasTextContent, hasCompleteTextContent, childrenData, hasChildrenCompleteTextContent}}"></template>
+    </block>
+    <block a:elif="{{status === 2}}">
+      <template 
+        is="index-complete"
+        key="index-complete"
+        data="{{data: activeNeedImg, allCompleteData, hasTextContent, hasCompleteTextContent, childrenData, hasChildrenCompleteTextContent}}"></template>
+    </block>
+</view>
+
+
+<!-- 页面底部弹出框 -->
+<template
+  is="items"
+  key="items"
+  data="{{modalData, animMaskData, animContentData}}"
+/>

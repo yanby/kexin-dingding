@@ -1,0 +1,100 @@
+<template name="index-nocomplete">
+  <view class="page-task-no-complete">
+    <view class="page-card">
+      <view class="page-card-top">
+        <view class="page-card-top-img">
+          <image src="/images/no-complete.png" mode="" />
+        </view>
+        <view class="page-card-top-text">该任务尚未完成</view>
+      </view>
+
+      <view class="page-card-title">{{data.name}}</view>
+
+      <!-- 图片类型的文字渲染 -->
+      <block a:for="{{data.content}}">
+        <view a:if="{{item.type === '0'}}" class="page-card-modal">
+          <!-- 图片未完成 -->
+          <block a:if="{{item.flag === '0'}}">
+            <view class="page-modal-card-left0" onTap="linkModal">+</view>
+            <view class="page-modal-card-right0">
+              <view class="page-modal-card-right-top0">{{item.name}}</view>
+              <view class="page-modal-card-right-bot0">请拍摄{{item.name}}</view>
+            </view>
+          </block>
+          <!-- 图片已完成（单张图片） -->
+          <block a:if="{{item.flag === '1' && item.value.length === 1}}">
+            <view class="page-modal-card-left1">
+              <image src="{{item.value[0]}}" mode="" />
+            </view>
+            <view class="page-modal-card-right1">
+              <view class="page-modal-card-right-top1">{{item.name}}</view>
+              <view class="page-modal-card-right-bot1">{{item.createTime}} 已完成</view>
+            </view>
+          </block>
+          <!-- 图片已完成（多张图片） -->
+          <block a:if="{{item.flag === '1' && item.value.length > 1}}">
+            <view class="page-modal-multiImg-info">
+              <view class="page-modal-multiImg-name">{{item.name}}</view>
+              <view class="page-modal-multiImg-time">{{item.createTime}}已完成</view>
+              <view class="page-modal-multiImg-imgs">
+                <image a:for="{{item.value}}" a:for-item="itemValue" src="{{itemValue}}" mode="" />
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+      <!-- 文字类型的数据渲染 -->
+      <block a:if="{{hasTextContent}}">
+        <view class="page-card-otherInfo">其他未完成信息</view>
+        <view data-disableClick="{{hasCompleteTextContent}}" onTap="linkModal" class="{{!hasCompleteTextContent ? 'page-card-otherInfo-button page-card-otherInfo-button-active' : 'page-card-otherInfo-button'}}" >去完成</view>
+      </block>
+
+      <!-- 有子结构的数据渲染 -->
+      <block a:for="{{childrenData}}" a:for-index="contentIndex">
+        <block a:if="{{item.flag === '1' || item.flag === '2'}}">
+          <view class="page-card-title">{{item.name}}</view>
+
+          <!-- 图片类型的文字渲染 -->
+          <block a:for="{{item.value}}" a:for-item="itemValue">
+            <view a:if="{{itemValue.type === '0'}}" class="page-card-modal">
+              <!-- 图片未完成 -->
+              <block a:if="{{itemValue.flag === '0'}}">
+                <view class="page-modal-card-left0" onTap="linkModal">+</view>
+                <view class="page-modal-card-right0">
+                  <view class="page-modal-card-right-top0">{{itemValue.name}}</view>
+                  <view class="page-modal-card-right-bot0">请拍摄{{itemValue.name}}</view>
+                </view>
+              </block>
+              <!-- 图片已完成（单张图片） -->
+              <block a:if="{{itemValue.flag === '1' && itemValue.value.length === 1}}">
+                <view class="page-modal-card-left1">
+                  <image src="{{itemValue.value}}" mode="" />
+                </view>
+                <view class="page-modal-card-right1">
+                  <view class="page-modal-card-right-top1">{{itemValue.name}}</view>
+                  <view class="page-modal-card-right-bot1">{{itemValue.createTime}} 已完成</view>
+                </view>
+              </block>
+              <!-- 图片已完成（多张图片） -->
+              <block a:if="{{itemValue.flag === '1' && itemValue.value.length > 1}}">
+                <view class="page-modal-multiImg-info">
+                  <view class="page-modal-multiImg-name">{{itemValue.name}}</view>
+                  <view class="page-modal-multiImg-time">{{itemValue.createTime}}已完成</view>
+                  <view class="page-modal-multiImg-imgs">
+                    <image a:for="{{itemValue.value}}" src="item" mode="" />
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+          <!-- 文字类型的数据渲染 -->
+          <block a:if="{{hasChildrenCompleteTextContent.length > 0 && hasChildrenCompleteTextContent[contentIndex].hasShowText}}">
+            <view class="page-card-otherInfo">其他未完成信息</view>
+            <view data-disableClick="{{hasChildrenCompleteTextContent[contentIndex].hasShowCompleteText}}" onTap="linkModal" class="{{!hasChildrenCompleteTextContent[contentIndex].hasShowCompleteText ? 'page-card-otherInfo-button page-card-otherInfo-button-active' : 'page-card-otherInfo-button'}}">去完成</view>
+            <!-- <view data-disableClick="{{hasChildrenCompleteTextContent[contentIndex].hasShowCompleteText}}" onTap="saveRecord" class="{{!hasChildrenCompleteTextContent[contentIndex].hasShowCompleteText ? 'page-card-otherInfo-button page-card-otherInfo-button-active' : 'page-card-otherInfo-button'}}">不使用</view> -->
+          </block>
+        </block>
+      </block>
+    </view>
+  </view>
+</template>

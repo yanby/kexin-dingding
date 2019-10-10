@@ -1,0 +1,86 @@
+.page-supplement-info {
+  position: relative;
+  width: 750rpx;
+}
+
+.page-card {
+  overflow: hidden;
+  width: 688rpx;
+  height: auto;
+  margin: 54rpx auto 0;
+  background: #FFF;
+}
+
+.page-title {
+  font-size: 40rpx;
+  font-family: SF Pro Text;
+  font-weight: bold;
+  color: rgba(89,87,87,1);
+  padding: 50rpx 0 40rpx;
+  text-align: center;
+}
+
+.page-input {
+  width: 618rpx;
+  margin: 0 auto 90rpx;
+  border-bottom: 2rpx solid rgba(234,234,234,1);
+}
+
+.page-input input {
+  width: 100%;
+  color: #5BC177;
+}
+
+.date-input {
+  width: 100%;
+  color: #5BC177;
+  height: 50rpx;
+  padding-left: 14rpx;
+}
+
+.init-date-input {
+  width: 100%;
+  height: 50rpx;
+  font-size: 34rpx;
+  padding-left: 14rpx;
+  color: #ccc;
+}
+
+.page-bot {
+  position: absolute;
+  bottom: 60rpx;
+  width: 750rpx;
+}
+
+.page-logo {
+  width: 750rpx;
+  height: 45rpx;
+  margin-top: 54rpx;
+  margin-bottom: 36rpx;
+  text-align: center;
+}
+
+.page-logo image {
+  width: 190rpx;
+  height: 45rpx;
+  background-size: 100%;
+}
+
+.page-button {
+  width: 750rpx;
+  text-align: center;
+}
+
+.page-button .button {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  line-height: 56rpx;
+  color: rgba(255,255,255,1);
+  width: 686rpx;
+  padding: 20rpx 0 18rpx;
+  margin: 0 auto;
+  text-align: center;
+  background: #5BC177;
+  border-radius: 6rpx;
+}

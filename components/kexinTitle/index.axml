@@ -1,0 +1,17 @@
+<!-- tab栏 -->
+<import src="/utils/items-top/index.axml"/>
+
+<view class="kexin-title" id="keXinTitle">
+  <view class="user"><image src="../../images/user-2.png" mode="" onTap="tapHome" /></view>
+  <view class="kexin-title-wrapper">
+    <view class="title-txt" onTap="choseBox">{{title}}</view>
+  </view>
+  <view class="backgroundimg backgroundimg-left"></view>
+  <view class="backgroundimg backgroundimg-right"></view>
+</view>
+  
+<template 
+  is="items-top"
+  key="items-top"
+  data="{{plotType, value, treeData, firstTree, secondTree, thirdTree, hidden, animMaskData, animContentData, farmName}}"
+></template>

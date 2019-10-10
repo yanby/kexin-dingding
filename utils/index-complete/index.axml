@@ -1,0 +1,180 @@
+<template name="index-complete">
+  <view class="page-task-no-complete">
+    <view class="page-card" a:if="{{allCompleteData.length === 0}}">
+      <view class="page-card-top">
+        <view class="page-card-top-img">
+          <image src="/images/complete.png" mode="" />
+        </view>
+        <view class="page-card-top-text complete-page-card-top-text">{{data.time}}全部完成</view>
+      </view>
+
+      <view class="page-card-title">{{data.name}}</view>
+
+      <!-- 图片类型的文字渲染 -->
+      <block a:for="{{data.content}}">
+        <view a:if="{{item.type === '0' && item.flag === '1'}}" class="page-card-modal">
+          <!-- 图片已完成（单张图片） -->
+          <block a:if="{{item.value.length === 1}}">
+            <view class="page-modal-card-left1">
+              <image src="{{item.value[0]}}" mode="" />
+            </view>
+            <view class="page-modal-card-right1">
+              <view class="page-modal-card-right-top1">{{item.name}}</view>
+              <view class="page-modal-card-right-bot1">{{item.createTime}} 已完成</view>
+            </view>
+          </block>
+          <!-- 图片已完成（多张图片） -->
+          <block a:if="{{item.value.length > 1}}">
+            <view class="page-modal-multiImg-info">
+              <view class="page-modal-multiImg-name">{{item.name}}</view>
+              <view class="page-modal-multiImg-time">{{item.createTime}}已完成</view>
+              <view class="page-modal-multiImg-imgs">
+                <image a:for="{{item.value}}" a:for-item="itemValue" src="{{itemValue}}" mode="" />
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+      <!-- 文字类型的数据渲染 -->
+      <block a:for="{{data.content}}">
+        <view a:if="{{item.type === '1'}}" class="page-modal-textInfo">
+          {{item.name}}: {{item.value}}{{item.unit}}
+        </view>
+        
+      </block>
+      <!-- <view a:if="{{data.name=='采收'}}" data-num="1" onTap="choseImage">继续添加</view> -->
+      <!-- 有子结构的数据渲染 -->
+      <block a:for="{{childrenData}}" a:for-index="contentIndex">
+        <block a:if="{{item.flag === '1' || item.flag === '2'}}">
+          <view class="page-card-title">{{item.name}}</view>
+
+          <!-- 图片类型的文字渲染 -->
+          <block a:for="{{item.value}}" a:for-item="itemValue">
+            <view a:if="{{itemValue.type === '0' && itemValue.flag === '1'}}" class="page-card-modal">
+              <!-- 图片已完成（单张图片） -->
+              <block a:if="{{itemValue.value.length === 1}}">
+                <view class="page-modal-card-left1">
+                  <image src="{{itemValue.value[0]}}" mode="" />
+                </view>
+                <view class="page-modal-card-right1">
+                  <view class="page-modal-card-right-top1">{{itemValue.name}}</view>
+                  <view class="page-modal-card-right-bot1">{{itemValue.createTime}} 已完成</view>
+                </view>
+              </block>
+              <!-- 图片已完成（多张图片） -->
+              <block a:if="{{itemValue.value.length > 1}}">
+                <view class="page-modal-multiImg-info">
+                  <view class="page-modal-multiImg-name">{{itemValue.name}}</view>
+                  <view class="page-modal-multiImg-time">{{itemValue.createTime}}已完成</view>
+                  <view class="page-modal-multiImg-imgs">
+                    <image a:for="{{itemValue.value}}" a:for-item="itemValueValue" src="{{itemValueValue}}" mode="" />
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+          <!-- 文字类型的数据渲染 -->
+          <block a:for="{{item.value}}" a:for-item="itemValue">
+            <view a:if="{{itemValue.type === '1'}}" class="page-modal-textInfo">
+              {{itemValue.name}}: {{itemValue.value}}{{itemValue.unit}}
+            </view>
+          </block>
+        </block>
+        <block a:else>
+          <view class="page-card-title">{{item.name}}: 无</view>
+        </block>
+      </block>
+    </view>
+
+    
+    <block a:if="{{allCompleteData.length > 0}}">
+      <view class="page-card">
+        <view class="page-card-top">
+          <view class="page-card-top-img">
+            <image src="/images/complete.png" mode="" />
+          </view>
+          <view class="page-card-top-text complete-page-card-top-text">{{allCompleteData[allCompleteData.length-1].time}}全部完成</view>
+        </view>
+
+        <block a:for="{{allCompleteData}}" a:for-item="itemAllData">
+
+          <view class="page-card-title">{{itemAllData.name}}</view>
+
+          <!-- 图片类型的文字渲染 -->
+          <block a:for="{{itemAllData.content}}">
+            <view a:if="{{item.type === '0' && item.flag === '1'}}" class="page-card-modal">
+              <!-- 图片已完成（单张图片） -->
+              <block a:if="{{item.value.length === 1}}">
+                <view class="page-modal-card-left1">
+                  <image src="{{item.value[0]}}" mode="" />
+                </view>
+                <view class="page-modal-card-right1">
+                  <view class="page-modal-card-right-top1">{{item.name}}</view>
+                  <view class="page-modal-card-right-bot1">{{item.createTime}} 已完成</view>
+                </view>
+              </block>
+              <!-- 图片已完成（多张图片） -->
+              <block a:if="{{item.value.length > 1}}">
+                <view class="page-modal-multiImg-info">
+                  <view class="page-modal-multiImg-name">{{item.name}}</view>
+                  <view class="page-modal-multiImg-time">{{item.createTime}}已完成</view>
+                  <view class="page-modal-multiImg-imgs">
+                    <image a:for="{{item.value}}" a:for-item="itemValue" src="{{itemValue}}" mode="" />
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+          <!-- 文字类型的数据渲染 -->
+          <block a:for="{{itemAllData.content}}">
+            <view a:if="{{item.type === '1'}}" class="page-modal-textInfo">
+              {{item.name}}: {{item.value}}{{item.unit}}
+            </view>
+          </block>
+
+          <!-- 有子结构的数据渲染 -->
+          <block a:for="{{childrenData}}" a:for-index="contentIndex">
+            <block a:if="{{item.flag === '2' || item.flag === '1'}}">
+              <view class="page-card-title">{{item.name}}</view>
+
+              <!-- 图片类型的文字渲染 -->
+              <block a:for="{{item.value}}" a:for-item="itemValue">
+                <view a:if="{{itemValue.type === '0' && itemValue.flag === '1'}}" class="page-card-modal">
+                  <!-- 图片已完成（单张图片） -->
+                  <block a:if="{{itemValue.value.length === 1}}">
+                    <view class="page-modal-card-left1">
+                      <image src="{{itemValue.value[0]}}" mode="" />
+                    </view>
+                    <view class="page-modal-card-right1">
+                      <view class="page-modal-card-right-top1">{{itemValue.name}}</view>
+                      <view class="page-modal-card-right-bot1">{{itemValue.createTime}} 已完成</view>
+                    </view>
+                  </block>
+                  <!-- 图片已完成（多张图片） -->
+                  <block a:if="{{itemValue.value.length > 1}}">
+                    <view class="page-modal-multiImg-info">
+                      <view class="page-modal-multiImg-name">{{itemValue.name}}</view>
+                      <view class="page-modal-multiImg-time">{{itemValue.createTime}}已完成</view>
+                      <view class="page-modal-multiImg-imgs">
+                        <image a:for="{{itemValue.value}}" a:for-item="itemValueValue" src="{{itemValueValue}}" mode="" />
+                      </view>
+                    </view>
+                  </block>
+                </view>
+              </block>
+              <!-- 文字类型的数据渲染 -->
+              <block a:for="{{item.value}}" a:for-item="itemValue">
+                <view a:if="{{itemValue.type === '1'}}" class="page-modal-textInfo">
+                  {{itemValue.name}}: {{itemValue.value}}{{itemValue.unit}}
+                </view>
+              </block>
+               
+            </block>
+          </block>
+        </block>
+      </view>
+    </block>
+
+  
+  </view>
+</template>
